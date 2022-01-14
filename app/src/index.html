@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Fetch accounts</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$.get("demo_test.asp", function(data, status){
+			console.log(data);
+			for (const item in data) {
+				let row = "<tr><td>"+item.name+"</td> <td>"+ 
+                    "<td>"+ item.balance +  "</td></tr>";
+				$("table tr").append(row)
+			};
+		})
+	</script>
+</head>
+<body>
+
+	<table id="table">
+	</table>
+
+</body>
+</html>
